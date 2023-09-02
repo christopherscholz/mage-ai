@@ -29,6 +29,8 @@ jobs:
   hadolint:
     name: Lint Docker Images
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     # Skip job if there are no images to test
     # https://github.com/dorny/paths-filter/issues/66
     if: ${{ needs.changed-images.outputs.images != '' && toJson(fromJson(needs.changed-images.outputs.images)) != '[]' }}
