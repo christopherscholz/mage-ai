@@ -1,6 +1,18 @@
 name: Build and test
 
-on: [push, pull_request]
+on: 
+  push:
+    paths:
+      - "mage_ai"
+      - "mage_integrations"
+      - "*.py"
+      - "requirements.txt"
+  pull_request:
+    paths:
+      - "mage_ai"
+      - "mage_integrations"
+      - "*.py"
+      - "requirements.txt"
 
 jobs:
   flake8-lint:
