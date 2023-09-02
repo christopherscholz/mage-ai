@@ -47,7 +47,7 @@ jobs:
           #ignore: DL3002,DL3008,DL3013,DL3016
       - name: Annotate Pull Request
         uses: actions/github-script@v6
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && failure()
         with:
           script: |
             const output = `
