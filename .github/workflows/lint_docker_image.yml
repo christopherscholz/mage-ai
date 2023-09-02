@@ -43,4 +43,4 @@ jobs:
       - uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: ${{ matrix.image }}
-          ignore: DL3002,DL3008,DL3013,DL3016
+          #ignore: DL3002,DL3008,DL3013,DL3016
