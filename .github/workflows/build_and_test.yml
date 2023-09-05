@@ -2,15 +2,7 @@ name: Build and test
 
 on:
   push:
-    paths:
-      - "mage_ai/**"
-      - "mage_integrations/**"
-      - "requirements.txt"
   pull_request:
-    paths:
-      - "mage_ai/**"
-      - "mage_integrations/**"
-      - "requirements.txt"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
