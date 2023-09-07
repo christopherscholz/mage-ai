@@ -11,6 +11,8 @@ from mage_ai.shared.config import BaseConfig
 from mage_ai.streaming.sinks.base import BaseSink
 
 
+
+
 @dataclass
 class AzureDataLakeConfig(BaseConfig):
     table_uri: str
